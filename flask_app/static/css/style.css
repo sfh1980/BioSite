@@ -20,6 +20,7 @@
     --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
     --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 
 
@@ -546,4 +547,62 @@ img{
 
 .about-section .about-info .btn-1{
     margin: 30px 20px 0 0;
+}
+
+/* portfolio section  */
+.portfolio-section{
+    /* background-color: red; */
+    padding: 80px 0 80px;
+    min-height: 100vh;
+
+}
+
+.portfolio-section .section-title{
+    margin-bottom: 40px;
+}
+
+.portfolio-section .portfolio-filter{
+    /* background-color: red; */
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-section .filter-item{
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin: 0 5px 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-black-600);
+    text-transform: capitalize;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-section .filter-item:hover:not(.active){
+    opacity: 0.6;
+}
+
+.portfolio-section .filter-item.active{
+    color: var(--skin-color);
+}
+
+.portfolio-section .portfolio-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+}
+
+.portfolio-section .portfolio-item-inner{
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.portfolio-section .portfolio-item-details{
+    display: none;
 }
