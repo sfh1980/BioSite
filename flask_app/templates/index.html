@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/font-awesome.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/color-1.css">
+    <!-- font  awesome -->
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- default color skin -->
+    <link rel="stylesheet" type="text/css" href="static/css/color-1.css">
+    <!-- style switcher - for demo purpose-->
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-1" href="static/css/color-1.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-2" href="static/css/color-2.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-3" href="static/css/color-3.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-4" href="static/css/color-4.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="static/css/color-5.css" disabled>
+    <link rel="stylesheet" type="text/css" href="static/css/style-switcher.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
     </style>
@@ -33,21 +43,25 @@
         <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
         <div class="nav-menu-inner">
             <ul>
-                <li><a href="#" class="inner-shadow active">home</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-                <!-- <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li> -->
-                <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
-                <!-- <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li> -->
-                <li><a href="#" class="outer-shadow hover-in-shadow">contact me</a></li>
+                <li><a href="#home" class="link-item inner-shadow active">home</a></li>
+                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">about</a></li>
+                <!-- <li><a href="#services" class="link-item outer-shadow hover-in-shadow">services</a></li> -->
+                <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">portfolio</a></li>
+                <!-- <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">testimonial</a></li> -->
+                <!-- <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">contact me</a></li> -->
             </ul>
         </div>
         <!-- copyright text  -->
         <!-- <p class="copyright-text">&copy; words and stuff</p> -->
+
     </nav>
+    <div class="fade-out-effect">
+        
+    </div>
     <!-- navigation menu end  -->
 
     <!-- home section start  -->
-    <section class="home-section section">
+    <section class="home-section section active" id="home">
         <!-- effect wrap start  -->
         <div class="effect-wrap">
             <div class="effect effect-1"></div>
@@ -72,7 +86,7 @@
                     <p>Hello</p>
                     <h2>I'm Sean Holmes</h2>
                     <h1>Recent graduate from Coding Dojo and new Web Application Developer looking for gainful employment in a new career field. Thanks for checking out my profile page.</h1>
-                    <a href="#about-me" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+                    <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
                 </div>
                 <div class="home-img">
                     <div class="img-box inner-shadow">
@@ -84,7 +98,7 @@
     </section>
     <!-- home section end  -->
     <!-- about section start  -->
-    <section class="about-section section">
+    <section class="about-section section" id="about">
         <div class="container">
             <div class="row">
                 <div id="about-me" class="section-title">
@@ -108,7 +122,7 @@
                     Some might say not the smartest of moves, yet here we are. I decided on a coding bootcamp with an original intent on learning Python but instead gained a solid foundation in not only Python, but Java, MERN, HTML, CSS, JavaScript, MySQL, MongoDB 
                     and many other frameworks and libraries and tools. I took better to some items than others but still want to build upon that continue this neverending journey. </p>
                         <a href="./static/docs/sh2023resume3.docx" class="btn-1 outer-shadow hover-in-shadow">Download Resume</a>
-                        <!-- <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a> -->
+                        <!-- <a href="#" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a> -->
                 </div>
             </div>
         </div>
@@ -120,7 +134,7 @@
     <!-- services section end  -->
 
     <!-- portfolio section  -->
-    <section class="portfolio-section section">
+    <section class="portfolio-section section" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -292,32 +306,24 @@
         </div>
     </section>
     <!-- portfolio section end  -->
+
+<!-- might do something with this (testimonial section) later  -->
+<!-- https://www.youtube.com/watch?v=iZHoBVO0jqg but more of a comment section somehow, so  needs database work too -->
+<!-- might do something with this (testimonial section) later  -->
+
+<!-- contact section  -->
+<!-- if i decide to come back to this - https://www.youtube.com/watch?v=eYdRKjaotK4&t=0s  -->
+<!-- contact section  -->
+
     <!-- portfolio popup start  -->
     <div class="pp portfolio-popup">
         <div class="pp-details">
             <div class="pp-details-inner">
                 <div class="pp-title">
-                    <h2>personal portfolio</h2>
-                    <p>Category - <span class="pp-project-category">Web Application</span></p>
+                    <h2></h2>
+                    <p>Category - <span class="pp-project-category"></span></p>
                 </div>
                 <div class="pp-project-details">
-                    <div class="row">
-                        <div class="description">
-                            <h3>Project Brief:</h3>
-                            <p>words and phrases that mean things and talk about stuff.
-                             with punctuation and periods and dashes. and more stuff, yay me.
-                             big pat on my back. More words and phrases to make stuff up and see things.</p>
-                        </div>
-                        <div class="info">
-                            <h3>Project Info</h3>
-                            <ul>
-                                <li>Date - <span>2023</span></li>
-                                <li>client - <span>xyz</span></li>
-                                <li>tools - <span>html, css, other stuff</span></li>
-                                <li>web - <span><a href="#">www.domain.com</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -329,7 +335,7 @@
                 <div class="pp-project-details-btn outer-shadow hover-in-shadow">Project Details <i class="fas fa-plus"></i></div>
                 <div class="pp-close outer-shadow hover-in-shadow">&times;</div>
                 <img src="./static/img/personal-portfolio.png" alt="img" class="pp-img outer-shadow">
-                <div class="pp-counter">1 of 6</div>
+                <div class="pp-counter"></div>
             </div>
             <div class="pp-loader">
                 <div></div>
@@ -341,8 +347,30 @@
     </div>
     <!-- portfolio popup end  -->
 
+    <!-- style switcher start - demo purpose only  -->
+    <div class="style-switcher outer-shadow">
+        <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon outer-shadow hover-in-shadow">
+            <i class="fas"></i>
+        </div>
+        
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- style switcher end - demo purpose only  -->
+
     <!-- main javascript  -->
     <script src="./static/javascript/main.js"></script>
+    <!-- style-switcher javascript  -->
+    <script src="./static/javascript/style-switcher.js"></script>
 
 </body>
 </html>
