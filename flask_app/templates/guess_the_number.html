@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="static/brython/brython.js"></script>
+    <script type="text/javascript" src="static/brython/brython_stdlib.js"></script>
+    <title>Guess The Number</title>
+</head>
+<body onload="brython()">
+    
+    <script type="text/python">
+        import random
+        from browser import document
+
+        guessesTaken = 0
+
+        def printOutput(text):
+            output = document.getElementById("output")
+            output.innerHTML += text + "<br>"
+
+        def handleGuess(event):
+            guess = document.getElementById("guess").value
+            guess = int(guess)
+        
+            global guessesTaken
+            guessesTaken += 1
+
+            if guess < number:
+                printOutput('Your guess is too low')
+
+            if guess > number:
+                printOutput('Your guess is too high')
+
+            if guess == number:
+                guessesTaken = str(guessesTaken + 1)
+                printOutput('Good job, ' + myName + '! You guessed my number in ' +
+                      guessesTaken + ' guesses!')
+                document.getElementById("guess").disabled = True
+                document.getElementById("submit").disabled = True
+
+            document.getElementById("guess").value = "";
+
+        def startGame():
+            printOutput('Hello! What is your name?')
+            input_element = document.createElement("input")
+            input_element.type = "text"
+            input_element.id = "name"
+            input_element.name = "name"
+            input_element.required = True
+            document.body.appendChild(input_element)
+
+            submit_button = document.createElement("button")
+            submit_button.innerHTML = "Start"
+            submit_button.id = "start"
+            submit_button.onclick = startGame1
+            document.body.appendChild(submit_button)
+
+        def startGame1(event):
+            global myName
+            myName = document.getElementById("name").value
+            document.getElementById("name").disabled = True
+            document.getElementById("start").disabled = True
+            printOutput('Well, ' + myName + ', I am thinking of a number between 1 and 20')
+            printOutput('Take a guess:')
+            input_element = document.createElement("input")
+            input_element.type = "number"
+            input_element.id = "guess"
+            input_element.name = "guess"
+            input_element.required = True
+            input_element.onkeydown = handleEnter
+            document.body.appendChild(input_element)
+
+            submit_button = document.createElement("button")
+            submit_button.innerHTML = "Submit"
+            submit_button.id = "submit"
+            submit_button.onclick = handleGuess
+            document.body.appendChild(submit_button)
+
+        def handleEnter(event):
+            if event.keyCode == 13:
+                handleGuess(event)
+
+
+        startGame()
+        number = random.randint(1, 20)
+
+    </script>
+
+    <div id="output"></div>
+</body>
+</html>
